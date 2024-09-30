@@ -1,7 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-      "config:recommended",
+      "config:best-practices",
       "preset:automergePatch",
       "github>derteaser/renovate-presets:gitmoji"
     ],
@@ -25,7 +25,7 @@
       },
       {
         "matchPackagePrefixes": [
-            "filament"
+          "filament"
         ],
         "groupName": "Filament monorepo",
         "groupSlug": "filament"
