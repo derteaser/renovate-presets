@@ -1,0 +1,35 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:recommended",
+      "preset:automergePatch",
+      "github>derteaser/renovate-presets:gitmoji"
+    ],
+    "lockFileMaintenance": {
+      "enabled": true
+    },
+    "packageRules": [
+      {
+        "matchSourceUrlPrefixes": [
+          "https://github.com/alpinejs/alpine"
+        ],
+        "groupName": "AlpineJS monorepo",
+        "groupSlug": "alpinejs"
+      },
+      {
+        "matchSourceUrlPrefixes": [
+          "https://github.com/Turfjs/turf"
+        ],
+        "groupName": "Turf monorepo",
+        "groupSlug": "turf"
+      },
+      {
+        "matchPackagePrefixes": [
+            "filament"
+        ],
+        "groupName": "Filament monorepo",
+        "groupSlug": "filament"
+      }
+    ]
+  }
+  
