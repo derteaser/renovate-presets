@@ -3,6 +3,7 @@
     "extends": [
       "config:best-practices",
       ":automergePatch",
+      ":automergeDigest",
       "github>derteaser/renovate-presets:gitmoji"
     ],
     "lockFileMaintenance": {
