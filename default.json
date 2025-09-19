@@ -4,10 +4,15 @@
       "config:best-practices",
       ":automergePatch",
       ":automergeDigest",
+      ":automergeLinters",
+      ":automergeTesters",
+      ":automergeTypes",
+      ":enableVulnerabilityAlerts",
       "github>derteaser/renovate-presets:gitmoji"
     ],
     "lockFileMaintenance": {
-      "enabled": true
+      "enabled": true,
+      "automerge": true
     },
     "packageRules": [
       {
