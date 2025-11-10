@@ -1,41 +1,46 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "config:best-practices",
-      ":automergePatch",
-      ":automergeDigest",
-      ":automergeLinters",
-      ":automergeTesters",
-      ":automergeTypes",
-      ":enableVulnerabilityAlerts",
-      "github>derteaser/renovate-presets:gitmoji"
-    ],
-    "lockFileMaintenance": {
-      "enabled": true,
-      "automerge": true
-    },
-    "packageRules": [
-      {
-        "matchSourceUrlPrefixes": [
-          "https://github.com/alpinejs/alpine"
-        ],
-        "groupName": "AlpineJS monorepo",
-        "groupSlug": "alpinejs"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":automergePatch",
+    ":automergeDigest",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes",
+    ":enableVulnerabilityAlerts",
+    "github>derteaser/renovate-presets:gitmoji"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["pnpm"],
+      "minor": {
+        "automerge": true
       },
-      {
-        "matchSourceUrlPrefixes": [
-          "https://github.com/Turfjs/turf"
-        ],
-        "groupName": "Turf monorepo",
-        "groupSlug": "turf"
+      "patch": {
+        "automerge": true
       },
-      {
-        "matchPackagePrefixes": [
-          "filament"
-        ],
-        "groupName": "Filament monorepo",
-        "groupSlug": "filament"
+      "pin": {
+        "automerge": true
       }
-    ]
-  }
-  
+    },
+    {
+      "matchSourceUrlPrefixes": ["https://github.com/alpinejs/alpine"],
+      "groupName": "AlpineJS monorepo",
+      "groupSlug": "alpinejs"
+    },
+    {
+      "matchSourceUrlPrefixes": ["https://github.com/Turfjs/turf"],
+      "groupName": "Turf monorepo",
+      "groupSlug": "turf"
+    },
+    {
+      "matchPackagePrefixes": ["filament"],
+      "groupName": "Filament monorepo",
+      "groupSlug": "filament"
+    }
+  ]
+}
