@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(jq -r '.tool_input.file_path // empty' < /dev/stdin); [ -n \"$FILE\" ] && [ \"$(dirname \"$FILE\")\" = \"${CLAUDE_PROJECT_DIR:-$PWD}\" ] && [ \"${FILE##*.}\" = \"json\" ] && [ \"${FILE##*/}\" != \"package.json\" ] && exec npx --yes --package renovate -- renovate-config-validator \"$FILE\" >&2"
+          }
+        ]
+      }
+    ]
+  }
+}
