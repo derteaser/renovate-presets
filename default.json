@@ -28,17 +28,17 @@
       }
     },
     {
-      "matchSourceUrlPrefixes": ["https://github.com/alpinejs/alpine"],
+      "matchSourceUrls": ["https://github.com/alpinejs/alpine{/,}**"],
       "groupName": "AlpineJS monorepo",
       "groupSlug": "alpinejs"
     },
     {
-      "matchSourceUrlPrefixes": ["https://github.com/Turfjs/turf"],
+      "matchSourceUrls": ["https://github.com/Turfjs/turf{/,}**"],
       "groupName": "Turf monorepo",
       "groupSlug": "turf"
     },
     {
-      "matchPackagePrefixes": ["filament"],
+      "matchPackageNames": ["filament{/,}**"],
       "groupName": "Filament monorepo",
       "groupSlug": "filament"
     }
