@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate preset for Kirby CMS projects",
+  "packageRules": [
+    {
+      "matchPackageNames": ["getkirby{/,}**"],
+      "groupName": "Kirby monorepo",
+      "groupSlug": "kirby"
+    }
+  ]
+}

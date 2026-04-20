@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate preset for Laravel / Filament / Livewire projects",
+  "packageRules": [
+    {
+      "matchPackageNames": ["filament{/,}**"],
+      "groupName": "Filament monorepo",
+      "groupSlug": "filament"
+    },
+    {
+      "matchPackageNames": ["livewire{/,}**"],
+      "groupName": "Livewire monorepo",
+      "groupSlug": "livewire"
+    }
+  ]
+}

@@ -31,16 +31,6 @@
       "matchSourceUrls": ["https://github.com/alpinejs/alpine{/,}**"],
       "groupName": "AlpineJS monorepo",
       "groupSlug": "alpinejs"
-    },
-    {
-      "matchSourceUrls": ["https://github.com/Turfjs/turf{/,}**"],
-      "groupName": "Turf monorepo",
-      "groupSlug": "turf"
-    },
-    {
-      "matchPackageNames": ["filament{/,}**"],
-      "groupName": "Filament monorepo",
-      "groupSlug": "filament"
     }
   ]
 }
