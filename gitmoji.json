@@ -8,12 +8,12 @@
   },
   "packageRules": [
     {
-      "updateTypes": ["pin"],
+      "matchUpdateTypes": ["pin"],
       "commitMessagePrefix": "📌",
       "commitMessageAction": "Pin"
     },
     {
-      "updateTypes": ["rollback"],
+      "matchUpdateTypes": ["rollback"],
       "commitMessagePrefix": "⬇️",
       "commitMessageAction": "Downgrade"
     }

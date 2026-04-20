@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate preset for React Native projects. Expo grouping is provided by Renovate's built-in monorepo:expo preset.",
+  "packageRules": [
+    {
+      "matchSourceUrls": ["https://github.com/facebook/react-native{/,}**"],
+      "groupName": "React Native monorepo",
+      "groupSlug": "react-native"
+    },
+    {
+      "matchSourceUrls": ["https://github.com/react-navigation/react-navigation{/,}**"],
+      "groupName": "React Navigation monorepo",
+      "groupSlug": "react-navigation"
+    }
+  ]
+}
