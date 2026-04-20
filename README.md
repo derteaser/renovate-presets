@@ -22,37 +22,49 @@ Named presets are composable — add any that match your project.
 **Laravel / Filament / Livewire**
 
 ```json
-"extends": [
-  "github>derteaser/renovate-presets",
-  "github>derteaser/renovate-presets:laravel"
-]
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>derteaser/renovate-presets",
+    "github>derteaser/renovate-presets:laravel"
+  ]
+}
 ```
 
 **Kirby CMS**
 
 ```json
-"extends": [
-  "github>derteaser/renovate-presets",
-  "github>derteaser/renovate-presets:kirby"
-]
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>derteaser/renovate-presets",
+    "github>derteaser/renovate-presets:kirby"
+  ]
+}
 ```
 
 **Astro**
 
 ```json
-"extends": [
-  "github>derteaser/renovate-presets",
-  "github>derteaser/renovate-presets:astro"
-]
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>derteaser/renovate-presets",
+    "github>derteaser/renovate-presets:astro"
+  ]
+}
 ```
 
 **React Native**
 
 ```json
-"extends": [
-  "github>derteaser/renovate-presets",
-  "github>derteaser/renovate-presets:react-native"
-]
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>derteaser/renovate-presets",
+    "github>derteaser/renovate-presets:react-native"
+  ]
+}
 ```
 
 Mix and match: a Laravel-API + React-Native-client repo extends all three of `default`, `laravel`, and `react-native`.

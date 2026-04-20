@@ -3,12 +3,12 @@
   "description": "Renovate preset for Laravel / Filament / Livewire projects",
   "packageRules": [
     {
-      "matchPackageNames": ["filament{/,}**"],
+      "matchPackageNames": ["filament/*"],
       "groupName": "Filament monorepo",
       "groupSlug": "filament"
     },
     {
-      "matchPackageNames": ["livewire{/,}**"],
+      "matchPackageNames": ["livewire/*"],
       "groupName": "Livewire monorepo",
       "groupSlug": "livewire"
     }

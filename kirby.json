@@ -3,7 +3,7 @@
   "description": "Renovate preset for Kirby CMS projects",
   "packageRules": [
     {
-      "matchPackageNames": ["getkirby{/,}**"],
+      "matchPackageNames": ["getkirby/*"],
       "groupName": "Kirby monorepo",
       "groupSlug": "kirby"
     }

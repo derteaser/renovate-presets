@@ -3,7 +3,7 @@
   "description": "Renovate preset for Astro projects. Core `astro` + `@astrojs/*` grouping is provided by Renovate's built-in monorepo:astro preset.",
   "packageRules": [
     {
-      "matchPackageNames": ["@astro-community/{/,}**"],
+      "matchPackageNames": ["@astro-community/*"],
       "groupName": "Astro community plugins",
       "groupSlug": "astro-community"
     }
