@@ -6,6 +6,24 @@
       "matchPackageNames": ["getkirby/*"],
       "groupName": "Kirby monorepo",
       "groupSlug": "kirby"
+    },
+    {
+      "matchPackageNames": ["derteaser/kirby-testing"],
+      "matchDatasources": ["packagist"],
+      "enabled": false
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)composer\\.json$/"],
+      "matchStrings": [
+        "\"derteaser/kirby-testing\"\\s*:\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "derteaser/kirby-testing",
+      "packageNameTemplate": "derteaser/kirby-testing",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v(?<version>.+)$"
     }
   ]
 }
