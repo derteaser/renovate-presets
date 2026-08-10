@@ -11,9 +11,11 @@
     ":enableVulnerabilityAlerts",
     "github>derteaser/renovate-presets:gitmoji"
   ],
+  "prHourlyLimit": 6,
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "schedule": ["* * * * 1"]
   },
   "packageRules": [
     {

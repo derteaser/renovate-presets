@@ -11,6 +11,7 @@ Named presets are **additive building blocks** — consumers extend `default` pl
 ## Files
 
 - `default.json` — the default preset. Extends `config:best-practices`, enables a set of `:automerge*` presets, turns on `lockFileMaintenance` with automerge, and defines `packageRules` (pnpm auto-merge for minor/patch/pin; AlpineJS monorepo grouping). Also extends the sibling `gitmoji` preset.
+  - Scheduling is load-bearing and easy to break: `schedule:weekly` confines non-patch updates to `before 4am on monday`, and Renovate's default `prHourlyLimit` of 2 then caps a repo at 8 non-patch PRs per week. `prHourlyLimit` is raised to 6 for that reason, and `lockFileMaintenance` gets its own all-Monday schedule (`* * * * 1`) so it is not starved by the weekly batch — it shares Renovate's default `before 4am on monday` otherwise and lands last in the queue. Changing any of these three together requires re-checking that lock file maintenance still gets a slot.
 - `gitmoji.json` — named preset (`:gitmoji`) that styles commits/labels with gitmoji (`⬆️ Upgrade`, `📌 Pin`, `⬇️ Downgrade`) and disables major-version automerge globally.
 - `laravel.json` — named preset (`:laravel`) for Laravel projects. Groups the Filament and Livewire monorepos.
 - `kirby.json` — named preset (`:kirby`) for Kirby CMS projects. Groups `getkirby/*` Composer packages.

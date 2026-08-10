@@ -6,7 +6,9 @@ Shared [Renovate](https://docs.renovatebot.com/) configuration presets.
 
 ### Minimum — universal baseline
 
-Every consumer should extend the default preset. It pulls in `config:best-practices`, automerges patch/digest/linter/tester/type updates, runs `lockFileMaintenance`, groups AlpineJS and pnpm updates, and styles commits via the sibling `gitmoji` preset.
+Every consumer should extend the default preset. It pulls in `config:best-practices`, automerges patch/digest/linter/tester/type updates, runs `lockFileMaintenance` weekly, groups AlpineJS and pnpm updates, and styles commits via the sibling `gitmoji` preset.
+
+Non-patch updates are batched into the `before 4am on monday` window (`schedule:weekly`); patches run at any time. `prHourlyLimit` is raised to 6 so that batch can actually drain — at Renovate's default of 2, a 4-hour window caps the repo at 8 non-patch PRs per week. `lockFileMaintenance` is scheduled across all of Monday rather than sharing the same 4-hour window, so it is never crowded out by the weekly batch.
 
 ```json
 {
